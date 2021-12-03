@@ -1,0 +1,937 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");  /* imported fond "Poppins" from google*/
+:root {
+  --primary-color: #0024f3;     /* set primary colour so i do not have to find the color code everytime*/
+}
+
+body {
+  background: #dbf0f1;          /* changed colour, margin and font for body tag*/
+  margin: 0;
+  font-family: 'Poppins';
+  
+}
+
+.background-container{            /* added background img and set the dimension and z-index for the container*/
+  background-image: url("/images/picture-of-cruiseship.jpeg");
+  z-index: -1;
+  width: 1888px;
+  height: 288px;
+}
+
+.navbar {                        /* set navbar color and padding*/
+  background: white;
+  padding: 1em;
+}
+
+.navbar .logo {                 /* set color and font for "TravelThe" from the company name*/
+  text-decoration: none;
+  font-weight: bold;
+  color: black;
+  font-size: 1.2em;
+}
+
+.navbar .logo span {            /* set colour and font for "Sea" for the company name*/
+  color: var(--primary-color);
+}
+.hero .container{               /* way more than a cruise container */
+  position: relative;
+  
+}
+.navbar nav {                   /* i started doing from dimension of phone and worked my way up in dimension so i hid the nav bar for phone size*/
+  display: none;
+}
+
+.navbar .container {            /* rearranging content for navbar "webkit" is a vendor-prefixed properties offered by the relevant rendering engines (-webkit for Chrome, */
+  display: -webkit-box;         /* while (-moz for safari) etc.*/
+  display: -ms-flexbox;
+  display: flex;
+  place-content: space-between; /* put a space between "home, destinations, deals" and "contact, puchase"*/
+}
+
+.navbar .mobile-menu {          /* for mobile menu to change the cursor to a pointer when hovering over the hamburger mobile menu*/
+  cursor: pointer;
+}
+
+a {                             /* set color of all references*/
+  color: #444444;
+}
+
+ul {
+  list-style-type: none;        /* remove the bullet points for the list and set margin/padding */
+  margin: 0;
+  padding: 0;
+}
+
+section {                       /* set padding for section tag*/
+  padding: 5em 2em;
+}
+
+.hero {                         /* set position of text for class="hero" */      
+  text-align: center;
+}
+
+.left-col .subhead {            /* edit the looks of subhead=" a new point of view"*/
+  text-transform: uppercase;
+  font-weight: bold;
+  color: gray;
+  letter-spacing: .3em;
+}
+
+.left-col h1 {                  /* edit the looks of h1="Way more than a cruise"*/
+  font-size: 2.5em;
+  line-height: 1.3em;
+  margin-top: .2em;
+}
+
+.left-col .primary-cta {        /* "Visit Website" button*/
+  background: var(--primary-color);
+  color: white;
+  text-decoration: none;
+  padding: .6em 1.3em;
+  font-size: 1.4em;
+  border-radius: 5em;
+  font-weight: bold;
+  display: inline-block;
+}
+
+.left-col .watch-video-cta {    /* "Watch Video" direct link*/
+  display: block;
+  margin-top: 1em;
+}
+
+.left-col .watch-video-cta img { /* small video icon*/
+  margin-right: .5em;
+}
+
+
+section.features-section {     /* cruise features section*/
+  background-image: url("/images/for-features-section-img.jpg");
+  color: white;
+}
+
+ul.features-list {            /* li of features of cruise on home page*/
+  margin: 0;                  /* defines a size range greater than or equal to min and less than or equal to max*/
+  padding-left: .1em;         /* grid template */
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(19rem, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(19rem, 1fr));
+}
+
+ul.des-features-list {        /* li of features of destinations on destinations page*/
+  margin: 0;                  /* defines a size range greater than or equal to min and less than or equal to max*/
+  padding-left: .1em;     
+  display: -ms-grid;          /* grid template */
+  display: grid;
+  -ms-grid-columns: (minmax(19rem, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(19rem, 1fr));
+}
+
+.singapore .des-features-list{  /* li of attractions  for singapore*/
+  margin-left: 1em;
+}
+
+.paris .des-features-list{      /* li of attractions for paris*/
+  margin-left: 1em;
+}
+
+ul.features-list li {           /* cruise features list*/
+  font-size: 1.1em;
+  margin-bottom: 1em;
+  margin-left: 2em;
+  position: relative;
+}
+
+ul.des-features-list li {      /* destination features list*/
+  font-size: 1.1em;
+  margin-bottom: 1em;
+  margin-left: 2em;
+  position: relative;
+}
+
+ul.features-list li:before {    /* cruise features in phone view*/
+  content: '';
+  left: -2em;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-image: url("../images/bullet.svg");
+  background-size: contain;
+  margin-right: .5em;
+}
+
+ul.des-features-list li:before {  /* destination features in phone view*/
+  content: '';
+  left: -2em;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-image: url("../images/bullet.svg");
+  background-size: contain;
+  margin-right: .5em;
+}
+
+
+.reviews-section {            /* review section background and colour*/
+  
+  background-image: url("../images/picture-of-cruise.jpg");
+  background-image: no-repeat;
+  color: white;
+}
+
+.reviews-section li {       /* editing review section one person per item on list*/
+  background: #006BD6;
+  text-align: center;
+  padding: 2em 1em;
+  width: 80%;
+  margin: 0 auto 5em auto;
+  border-radius: 1em;
+}
+
+.reviews-section li img {   /* editing size of portrait for review section*/
+  width: 5em;
+  height: 5em;
+  border: 5px solid #006BD6;
+  border-radius: 50%;
+  margin-top: -4.5em;
+}
+
+h2 {
+  font-size: 2em;           /*  header for purchase.html and contact.html*/
+}
+
+label {                     /* contact section forms*/
+  display: block;
+  font-size: 1.2em;
+  margin-bottom: .5em;
+}
+
+input, textarea {           /* contact section forms*/
+  width: 100%;
+  padding: .8em;
+  margin-bottom: 1em;
+  border-radius: .3em;
+  border: 1px solid gray;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+input[type="submit"] {      /* contact section forms*/
+  background-color: var(--primary-color);
+  color: white;
+  font-weight: bold;
+  font-size: 1.3em;
+  border: 0;
+  margin-bottom: 5em;
+  border-radius: 5em;
+  display: inline-block;
+  padding: .8em 2em;
+  width: unset;
+  cursor: pointer;
+}
+
+.left-col h1{
+  font-size: 2.5em;
+  line-height: 1.3em;
+  margin-top: .2em;
+  letter-spacing: .1em;
+}
+
+
+iframe {                 /* specify iframe*/
+  width: 100%;
+  height: 300px;
+}
+
+nav.menu-btn {          /* do not display mobile menu*/
+  display: block;
+}
+
+nav {                   /* nav bar*/                        
+  position: fixed;
+  z-index: 999;
+  width: 66%;
+  right: 0;
+  top: 0;
+  background: #20272E;
+  height: 100vh;
+  padding: 1em;
+}
+
+nav ul.primary-nav {
+  margin-top: 5em;
+}
+
+nav li a {            /* nav bar*/
+  color: white;
+  text-decoration: none;
+  display: block;
+  padding: .5em;
+  font-size: 1.3em;
+  text-align: right;
+}
+
+nav li a:hover {      /* nav bar*/
+  font-weight: bold;
+}
+
+.mobile-menu-exit {   /* change cursor to pointer when hover mobile menu button(exit) */
+  float: right;
+  margin: .5em;
+  cursor: pointer;
+}
+
+.reciept h2{          /* purchase.html*/
+  text-align: center;
+}
+
+
+.container-1{         /* destination,quantity,price*/
+  display: flex;
+  border-radius: 2em;
+}
+.container-2{         /* destination,quantity,price*/
+  display: flex;
+  border-radius: 2em;
+}
+.container-3{        /* destination,quantity,price*/
+  display: flex;
+  border-radius: 2em;
+}
+.container-4{         /* destination,quantity,price*/
+  display: flex;
+  border-radius: 2em;
+}
+.name-of-obj li{       /* destination,quantity,price*/           
+  font-size: 1.5em;
+  margin-bottom: 2em;
+  margin-left: 2em;
+  margin-top: 3em;
+  font-weight: bold;
+  margin-right: 1.7em;
+  position: relative;
+  color: whitesmoke;
+}
+
+
+.reciept .destination-1 li{
+  display: flex;
+  font-size: 1.5em;
+  margin-bottom: 2em;
+  margin-left: 2em;
+  margin-top: 3em;
+  position: relative; 
+  padding-right: 2em;
+  color: whitesmoke;
+}
+
+.destination-1{
+  margin-bottom: 3em;
+}
+
+.reciept .destination-2 li{
+  display: flex;
+  font-size: 1.5em;
+  margin-bottom: 2em;
+  margin-left: 2em;
+  margin-top: 3em;
+  position: relative;
+  padding-right: 2em;
+  color: whitesmoke;
+}
+
+.destination-2{
+  margin-bottom: 3em;
+}
+.reciept .destination-3 li{
+  display: flex;
+  font-size: 1.5em;
+  margin-bottom: 2em;
+  margin-left: 2em;
+  margin-top: 3em;
+  position: relative; 
+  padding-right: 2em;
+  color: whitesmoke;
+}
+
+.destination-3{
+  margin-bottom: 3em;
+}
+
+.reciept .destination-4 li{
+  display: flex;
+  font-size: 1.5em;
+  margin-bottom: 2em;
+  margin-left: 2em;
+  margin-top: 3em;
+  position: relative; 
+  padding-right: 2em;
+  color: whitesmoke;
+}
+
+.destination-4{
+  margin-bottom: 3em;
+}
+
+.container-1, .container-2, .container-3, .container-4{   /* container for purchase*/
+  background: #74BDCB;
+  margin-bottom: 2em;
+  margin-top: 1em;
+}
+.deals-container h1 {       /* deals header*/
+  font-size: 3em;
+  
+  color: white;
+}
+
+.deals-container{
+  text-align: center;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  padding-top: 2em;
+  padding-bottom: 2em;  
+}
+.deals-container p{                   
+  text-transform: uppercase;
+  font-weight: bold;
+  color: whitesmoke;
+  letter-spacing: .3em;
+}
+.deal-1 h1{                     /* deals 1-5 */
+  font-size: 1.8em;
+}
+.deal-1{
+  text-align: center;
+  text-transform: uppercase;
+  padding-bottom: 3em;
+}
+.deal-1 .container{
+  border-radius: .4em;
+  padding-top: 2em;
+  padding-bottom: 2em;
+  color: white;
+  margin-left: 2em;
+  margin-right: 2em;
+}
+.deal-1 p{
+  font-size: 1em;
+  letter-spacing: .3em;
+  margin-bottom: 2em;
+}
+.deal-1 .price-of-deal{
+  font-weight: bold;
+  font-size: 2em;
+  margin-bottom: 0;
+}
+
+.deal-2 h1{
+  font-size: 1.8em;
+}
+.deal-2{
+  text-align: center;
+  text-transform: uppercase;
+  padding-bottom: 3em;
+}
+.deal-2 .container{
+  border-radius: .4em;
+  padding-top: 2em;
+  padding-bottom: 2em;
+  color: white;
+  margin-left: 2em;
+  margin-right: 2em;
+}
+.deal-2 p{
+  font-size: 1em;
+  letter-spacing: .3em;
+  margin-bottom: 2em;
+}
+.deal-2 .price-of-deal{
+  font-weight: bold;
+  font-size: 2em;
+  margin-bottom: 0;
+}
+
+.deal-3 h1{
+  font-size: 1.8em;
+}
+.deal-3{
+  text-align: center;
+  text-transform: uppercase;
+  padding-bottom: 3em;
+}
+.deal-3 .container{
+  border-radius: .4em;
+  padding-top: 2em;
+  padding-bottom: 2em;
+  color: white;
+  margin-left: 2em;
+  margin-right: 2em;
+}
+.deal-3 p{
+  font-size: 1em;
+  letter-spacing: .3em;
+  margin-bottom: 2em;
+}
+.deal-3 .price-of-deal{
+  font-weight: bold;
+  font-size: 2em;
+  margin-bottom: 0;
+}
+
+.deal-4 h1{
+  font-size: 1.8em;
+}
+.deal-4{
+  text-align: center;
+  text-transform: uppercase;
+  padding-bottom: 3em;
+}
+.deal-4 .container{
+  border-radius: .4em;
+  padding-top: 2em;
+  padding-bottom: 2em;
+  color: white;
+  margin-left: 2em;
+  margin-right: 2em;
+}
+.deal-4 p{
+  font-size: 1em;
+  letter-spacing: .3em;
+  margin-bottom: 2em;
+}
+.deal-4 .price-of-deal{
+  font-weight: bold;
+  font-size: 2em;
+  margin-bottom: 0;
+}
+
+
+.deal-5 h1{
+  font-size: 1.8em;
+}
+.deal-5{
+  text-align: center;
+  text-transform: uppercase;
+  padding-bottom: 3em;
+}
+.deal-5 .container{
+  border-radius: .4em;
+  padding-top: 2em;
+  padding-bottom: 2em;
+  color: white;
+  margin-left: 2em;
+  margin-right: 2em;
+}
+.deal-5 p{
+  font-size: 1em;
+  letter-spacing: .3em;
+  margin-bottom: 2em;
+}
+.deal-5 .price-of-deal{
+  font-weight: bold;
+  font-size: 2em;
+  margin-bottom: 0;
+}
+.deal-1 .container{
+  background-image: url("/images/picture-of-cruise.jpg");
+}
+.deal-2 .container{
+  background-image: url("/images/deals-header\ image.jpg");
+}
+.deal-3 .container{
+  background-image: url("/images/deal-img-2.jpg");
+}
+.deal-4 .container{
+  background-image: url("/images/deal-img-4.jpg");
+}
+.deal-5 .container{
+  background-image: url("/images/deal-img-3.jpg");
+}
+.para{
+  text-transform: uppercase;
+  color: black;
+  font-weight: bold;
+  letter-spacing: .3em; 
+  font-size: 0.5em;
+
+}
+
+.deals-header{
+  background-image: url("/images/deals-header\ image.jpg");
+}
+
+@media only screen and (min-width: 1000px) { /* media query for deals*/
+  .deals-container{
+    text-align: right;
+    padding-right: 4em;
+    margin-left: em;
+  }
+  .deal-1{
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+@media only screen and (min-width: 1000px) {  /* media query for deals*/
+  .deals-sub-container{
+    display: flex;
+  }
+  .deal-3 .container{
+    max-width: 440px;
+  }
+  .deal-4 .container{
+    max-width: 440px;
+  }
+  .deal-5 .container{
+    max-width: 440px;
+  }
+} 
+
+@media only screen and (min-wdith: 1080px){ /* media query for destinations*/
+  .alaska .des-features-list{
+    text-align: center;
+  }
+  .alaska .container{
+    padding-bottom: 0;
+    margin-bottom: 2em;
+    
+  }
+  .alaska .des-features-list{
+    text-align: center;
+  }
+  .des-features-list{
+    column-width: 200px;
+  }
+
+}
+.alaska .container{         /* container for destinations and background img*/
+  background-image: url("/images/alaska-img.jpg");
+  border-radius: 1em;
+}
+.korea .container{
+  border-radius: 1em;
+  background-image: url("/images/korea-img.jpg");
+}
+.japan .container{
+  border-radius: 1em;
+  background-image: url("/images/japan-img.jpg");
+}
+.paris .container{
+  border-radius: 1em;
+  background-image: url("/images/paris-img.jpg");
+}
+
+
+.alaska .des-features-list{       /*editing destination container and li content*/
+  margin-left: 1em;
+}
+.korea .des-features-list{
+  margin-left: 1em;
+}
+.japan .des-features-list{
+  margin-left: 1em;
+}
+.learn-more{
+  text-align: center;
+  font-size: 1em;
+  letter-spacing: .3em;
+  font-weight: bold;
+}
+.alaska .left-col{
+  color: whitesmoke;
+}
+.japan .left-col{
+  color: whitesmoke;
+}
+
+
+@media only screen and (min-wdith: 768px){   /* media query for purchase*/
+  .container-1{
+    text-align: center;
+    justify-content: center;
+  }
+}
+
+
+
+@media only screen and (min-width: 768px) {   /* media query for mobile menu and nav bar*/
+  .mobile-menu, .mobile-menu-exit {
+    display: none;
+  }
+  .navbar .container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 180px auto;
+        grid-template-columns: 180px auto;
+    -webkit-box-pack: unset;
+        -ms-flex-pack: unset;
+            justify-content: unset; 
+  }
+  .navbar nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    background: none;
+    position: unset;
+    height: auto;
+    width: 100%;
+    padding: 0;
+  }
+  .navbar nav ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .navbar nav a {
+    color: black;
+    font-size: 1em;
+    padding: .1em 1em;
+  }
+  .navbar nav ul.primary-nav {
+    margin: 0;
+  }
+  .navbar nav li.current a {
+    font-weight: bold;
+  }
+  .navbar nav li.purchase-cta a {
+    color: var(--primary-color);
+    border: 3px solid var(--primary-color);
+    font-weight: bold;
+    border-radius: 5em;
+    margin-top: -.2em;
+  }
+  .navbar nav li.purchase-cta a:hover {
+    background: var(--primary-color);
+    color: white;
+  }
+}
+
+@media only screen and (min-width: 1080px) {  /* media query for hero section*/
+  .container {
+    width: 1080px;
+    margin: 0 auto;
+  }
+  section {
+    padding: 10em 4em;
+  }
+  .hero .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    text-align: left;
+  }
+  .hero .container .left-col {
+    margin: 3em 3em 0 5em;
+  }
+  .hero .container .left-col h1 {
+    font-size: 3em;
+    width: 90%;
+  }
+  
+  .hero-cta {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .primary-cta {
+    margin-right: 1em;
+  }
+  
+  ul.features-list {
+    display: block;
+    margin-left: 5em;
+  }
+  ul.des-features-list{
+    display: block;
+    margin-left: 5em;
+  }
+  ul.features-list li {
+    font-size: 1.4em;
+  }
+  ul.des-features-list{
+    font-size: 1.4em;
+  }
+  ul.features-list li:before {
+    width: 30px;
+    height: 30px;
+  }
+  
+  .features-section {
+    position: relative;
+  }
+  
+  .reviews-section ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .reviews-section ul li {
+    margin: 0 1em;
+  }
+  .contact-section {
+    position: relative;
+  }
+  .contact-section .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .contact-right {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 45%;
+    height: 100%;
+  }
+  .contact-right iframe {
+    height: 100%;
+  }
+}
+
+@media only screen and (min-width: 1450px) {    /* media query for features of cruise*/
+  .features-section:before {
+    content: '';
+    position: absolute;
+    width: 10%;
+    height: 20em;
+    background: var(--primary-color);
+    left: 0;
+    top: -4em;
+  }
+  .features-section:after {
+    content: '';
+    position: absolute;
+    width: 200px;
+    height: 20em;
+    background: url("../images/dots.svg") no-repeat;
+    left: 4.5em;
+    top: 2em;
+  }
+}
+
+@media only screen and (min-width: 1080px){   /* media query for destinations*/
+  .alaska .container{
+    width: 1080px;
+    margin: 0 auto;
+  }
+  section {
+    padding: 10em 4em;
+  }
+  .alaska .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    text-align: left;
+  }
+  .alaska .container .left-col {
+    margin: 3em 3em 0 5em;
+  }
+  .alaska .container .left-col h1 {
+    font-size: 3em;
+    width: 90%;
+  }
+  
+  
+}
+
+@media only screen and (min-width: 1080px){   /* media query for destinations*/
+  .korea .container{
+    width: 1080px;
+    margin: 0 auto;
+  }
+  section {
+    padding: 10em 4em;
+  }
+  .korea .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    text-align: left;
+  }
+  .korea .container .left-col {
+    margin: 3em 3em 0 5em;
+  }
+  .korea .container .left-col h1 {
+    font-size: 3em;
+    width: 90%;
+  }
+  .korea-img {
+    width: 30%;
+    margin-right: 8em;
+  }
+  
+}
+
+
+@media only screen and (min-width: 1080px){     /* media query for destinations*/
+  .japan .container{
+    width: 1080px;
+    margin: 0 auto;
+  }
+  section {
+    padding: 10em 4em;
+  }
+  .japan .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    text-align: left;
+  }
+  .japan .container .left-col {
+    margin: 3em 3em 0 5em;
+  }
+  .japan .container .left-col h1 {
+    font-size: 3em;
+    width: 90%;
+  }
+  .japan-img {
+    width: 30%;
+    margin-right: 8em;
+  }
+  
+}
+
+@media only screen and (min-width: 1080px){     /* media query for destinations*/
+  .paris .container{
+    width: 1080px;
+    margin: 0 auto;
+  }
+  section {
+    padding: 10em 4em;
+  }
+  .paris .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    text-align: left;
+  }
+  .paris .container .left-col {
+    margin: 3em 3em 0 5em;
+  }
+  .paris .container .left-col h1 {
+    font-size: 3em;
+    width: 90%;
+  }
+  .paris-img {
+    width: 30%;
+    margin-right: 8em;
+  }
+  
+}
